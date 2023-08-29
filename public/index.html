@@ -40,38 +40,81 @@
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Omprakash Kambli</h1>
-        <p>Mumbai</p>
-    </header>
-    <div class="container my-5">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hi, I like coding, I'll add more information about myself later.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">T3TimeTable</h3>
-                            <p class="card-text">Description of project 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h3 class="card-title">Project 2</h3>
-                            <p class="card-text">Description of project 2.</p>
-                        </div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand nav-link" href="#home">Omprakash Kambli</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<div class="container my-5">
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to my Portfolio</p>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>About Me</h2>
+        <p>Automation, Competitive Coding and Solving Real Life Problems are what excite me in this vast realm of Programming, Scripting and what-nots.</p>
+    </section>
+
+    <section id="projects" style="display: none;">
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">T3TimeTable</h3>
+                        <p class="card-text">Description of project 1.</p>
                     </div>
                 </div>
             </div>
-            
-        </section>
-    </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Project 2</h3>
+                        <p class="card-text">Description of project 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="display: none;">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email at omii2k01@gmail.com or connect with me on </p>
+        
+      <style>
+        
+      </style>
+        <a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=omii2k01" target="_blank">LinkedIn</a>
+    </section>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Handle navigation clicks
+    $('.nav-link').click(function(e) {
+        e.preventDefault();
+        var targetSection = $($(this).attr('href'));
+        $('section').not(targetSection).hide();
+        targetSection.fadeIn();
+    });
+});
+</script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
